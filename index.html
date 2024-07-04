@@ -26,13 +26,15 @@
             width: auto;
         }
 
-        #powerbiReport iframe {
+        #powerbiReport iframe,
+        #mapIframe {
             width: 100%;
             height: 600px;
             border: none;
         }
 
-        #powerbiReport {
+        #powerbiReport,
+        #mapContainer {
             margin: 40px 0;
         }
 
@@ -67,18 +69,14 @@
 
         .custom-container {
             max-width: 1400px;
-            /* O cualquier otro valor que desees */
             margin: 0 auto;
-            /* Para centrarlo */
         }
 
-        /* Estilo para centrar las imágenes en el carrusel */
         .carousel-image-container {
             display: flex;
             justify-content: center;
             align-items: center;
             height: 500px;
-            /* Altura deseada para el carrusel */
         }
 
         .square-image {
@@ -87,35 +85,26 @@
             width: auto;
             height: auto;
             object-fit: contain;
-            /* Mantiene la relación de aspecto y ajusta la imagen al centro */
         }
 
-        /* Estilo para las flechas del carrusel en gris */
         .carousel-control-prev-icon,
         .carousel-control-next-icon {
             background-color: #edcbf0;
-            /* Cambia el color de fondo a gris */
         }
 
-        /* Estilo para cambiar el color del contorno de las flechas cuando se pasa el mouse */
         .carousel-control-prev:hover,
         .carousel-control-next:hover {
             background-color: #edcbf0;
-            /* Cambia el color de fondo a gris en hover */
         }
 
-        /* Estilo para cambiar el color de las flechas en modo activo (cuando se hace clic en ellas) */
         .carousel-control-prev.active,
         .carousel-control-next.active {
             background-color:#edcbf0;
-            /* Cambia el color de fondo a gris cuando están activas */
         }
 
-        /* Estilo para cambiar el color del borde de las flechas en modo activo */
         .carousel-control-prev-icon:after,
         .carousel-control-next-icon:after {
             color: white;
-            /* Cambia el color del borde a blanco cuando están activas */
         }
     </style>
 </head>
@@ -136,6 +125,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#powerbiReport">Informe</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#mapContainer">Mapa</a>
+                </li>
             </ul>
         </div>
     </nav>
@@ -143,7 +135,6 @@
     <div class="container mt-5">
 
         <!-- Carousel -->
-        <!-- Contenedor del carrusel -->
         <div id="carouselExampleAutoplaying" class="carousel slide" data-ride="carousel" data-interval="5000">
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -187,8 +178,6 @@
             </a>
         </div>
 
-
-
         <h2>¿Qué es APJ?</h2>
         <p style="text-align: justify;">El mecanismo de APJT está dirigido a las mujeres víctimas sobrevivientes de VBG,
             creado en el marco del programa de Seguridad Pública para las Mujeres de la Alcaldía de Medellín en el año
@@ -213,6 +202,12 @@
             <iframe title="Report Section" width="600" height="373.5"
                 src="https://app.powerbi.com/view?r=eyJrIjoiNzRmNTNhMTYtZDZlNS00ZmU3LTkxM2ItMWY1YjNkNDVmNmMyIiwidCI6Ijk5ZTFlNzIxLTcxODQtNDk4ZS04YWZmLWIyYWQ0ZTUzYzFjMiIsImMiOjR9&pageName=ReportSection32ca1c0015a07c09bccb"
                 frameborder="0" allowFullScreen="true"></iframe>
+        </div>
+
+        <!-- Mapa -->
+        <div id="mapContainer">
+            <h2>Mapa de Casos por Comuna</h2>
+            <iframe id="mapIframe" src="medellin_choropleth.html"></iframe>
         </div>
 
         <!-- Footer -->
